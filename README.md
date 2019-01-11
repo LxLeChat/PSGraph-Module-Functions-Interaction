@@ -7,7 +7,9 @@ then i use ast to create an array containing all the cmdlets i find in every fil
 This better works in a well organized module. (One file, one function..., i'm currently in the process of doing something more awesome!)
 at the end of the first loop you have ArrayOfFunctions, that contains all functions, and what functions are called inside their code.
 
-You can stop their if you want, or you can pass ArrayOfFunctions to PSGraph
+You can stop their if you want, or you can pass ArrayOfFunctions to PSGraph to generate a Graph :)
+Red nodes => dependent functions
+Green nodes => standalon function
 
 # Why i did it
 I've tasked to study a huuuuuuge module, with no comment, no documentation etc...
