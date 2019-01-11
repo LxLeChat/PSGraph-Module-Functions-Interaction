@@ -3,7 +3,8 @@ Snippet to help find functions interaction within a PS Module
 
 # How it works
 First i exclude all "standard" cmdlets. (variable b)
-then i use ast to create an array containing all the cmdlets i find in every file available under the specific path.
+dont forget to change the path of the folder containing your functions.
+then i use ast to create an arraylist containing all the cmdlets i find in every file available under the specific path.
 This better works in a well organized module. (One file, one function..., i'm currently in the process of doing something more awesome!)
 at the end of the first loop you have ArrayOfFunctions, that contains all functions, and what functions are called inside their code.
 
