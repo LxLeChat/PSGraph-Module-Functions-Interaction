@@ -13,6 +13,8 @@ Red nodes => dependent functions
 
 Green nodes => standalon function
 
+use: -OutPutForm pdf, with show-psgraph, if you want to search the graph!
+
 # Why i did it
 I've tasked to study a huuuuuuge module, with no comment, no documentation etc...
 
