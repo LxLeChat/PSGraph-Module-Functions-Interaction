@@ -10,7 +10,7 @@ Get-childitem -path $FolderPath -recurse -include '*.ps1','*.psm1' | %{
 
     # si il ya  une seule fonction dans le fichier
     If ( ($x.where({$_ -is [System.Management.Automation.Language.FunctionDefinitionAST]})).count -eq 1  ) {
-        $x.where({$_ -is [System.Management.Automation.Language.FunctionDefinitionAST]}) | select @{l='name';e={($_.name).ToLower()}},@{l="cmdlets";e={($x.findall({$args[0] -is [System.Management.Automation.Language.CommandAst]})).GetCommandName().ToLower() | %{if ( $_ -notin $b.name){$_}}}} | select name,cmdlets,@{l='IsDependent';e={If($null -ne $_.Cmdlets){$True}else{$false}}} | %{$a.add($_)}
+        $x.where({$_ -is [System.Management.Automation.Language.FunctionDefinitionAST]}) | select @{l='name';e={($_.name).ToLower()}},@{l="cmdlets";e={($x.findall({$args[0] -is [System.Management.Automation.Language.CommandAst]})).GetCommandName().ToLower() | %{if ( $_ -notin $b.name){$_}}}} | select name,cmdlets,@{l='IsDependent';e={If($null -ne $_.Cmdlets){$True}else{$false}}} | %{$ArrayOfFunctions.add($_)}
     }
 }
 
