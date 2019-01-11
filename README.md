@@ -14,4 +14,4 @@ I've tasked to study a huuuuuuge module, with no comment, no documentation etc..
 
 # Example
 Done on @lazyadmin ADSIPS Module
-![alt text](https://github.com/LxLeChat/PS-Graph-Module-Functions-Interaction/ADSIPS.png "ADSIPS")
+![alt text](PS-Graph-Module-Functions-Interaction/ADSIPS.png "ADSIPS")
