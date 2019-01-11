@@ -1,6 +1,6 @@
 $b=get-command | Where-Object source -like 'Microsoft.PowerShell*' | select name
 [System.Collections.ArrayList]$ArrayOfFunctions=@()
-$FolderPath = c:\module\function
+$FolderPath = "C:\Users\Lx\GitPerso\AdsiPS\AdsiPS\Public"
 
 ## Find all functions
 Get-childitem -path $FolderPath -recurse -include '*.ps1','*.psm1' | %{
@@ -16,7 +16,7 @@ Get-childitem -path $FolderPath -recurse -include '*.ps1','*.psm1' | %{
 
 ## Draw Graph
 graph depencies @{rankdir='LR'}{
-    Foreach ( $t in $a ) {
+    Foreach ( $t in $ArrayOfFunctions ) {
         If ( $t.IsDependent ) {
                 node -Name $t.name -Attributes @{Color='red'}
         } Else {
@@ -30,3 +30,4 @@ graph depencies @{rankdir='LR'}{
         }
     }
 } | Show-PSGraph
+
