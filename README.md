@@ -14,4 +14,4 @@ I've tasked to study a huuuuuuge module, with no comment, no documentation etc..
 
 # Example
 Done on @lazyadmin ADSIPS Module
-![OutPut](/examples/ADSIPS.png)
+![OutPut](/ADSIPS.png)
