@@ -1,4 +1,6 @@
-$b=get-command | Where-Object source -like 'Microsoft.PowerShell*' | select name
+[System.Collections.ArrayList]$b=@()
+$null = get-command | Where-Object source -like 'Microsoft.PowerShell*' | select name | %{$b.add($_.name)}
+$null = get-alias | %{ $b.add($_.name) }
 [System.Collections.ArrayList]$ArrayOfFunctions=@()
 $FolderPath = "C:\Users\Lx\GitPerso\AdsiPS\AdsiPS\Public"
 
