@@ -31,5 +31,5 @@ graph depencies @{rankdir='LR'}{
             }
         }
     }
-} | Show-PSGraph
+} | Show-PSGraph -DestinationPath c:\temp\autobot.pdf -OutputFormat pdf
 
