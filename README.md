@@ -1,3 +1,6 @@
+# UPDATE
+Made a module: https://github.com/LxLeChat/PSFunctionExplorer
+
 # PS-Module-Functions-Dependency
 Snippet to help find functions interaction within a PS Module
 
